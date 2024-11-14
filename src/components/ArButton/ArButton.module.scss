@@ -1,0 +1,61 @@
+.arButton {
+  background-color: #4169e1;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem;
+  z-index: 10;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.modal {
+  border: 1px solid #4169e1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1.5rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  z-index: 20;
+  color: #4169e1;
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .info {
+    width: 15rem;
+    border-bottom: 1px solid #4169e1;
+    padding: 0.2rem;
+  }
+  .qrCode {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid #4169e1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    a {
+        font-size: 1.5rem;
+    }
+}
