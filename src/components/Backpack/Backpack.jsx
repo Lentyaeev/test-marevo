@@ -8,7 +8,7 @@ import Strap from "../Strap/Strap";
 import { colors, metals } from "../../constants";
 
 export function Backpack({setMesh}) {
-  const { nodes, materials } = useGLTF("/backpack.glb");
+  const { nodes, materials } = useGLTF("./backpack.glb");
   const meshRef = React.useRef();
 
   const [searchParams] = useSearchParams();
@@ -79,4 +79,4 @@ export function Backpack({setMesh}) {
   );
 }
 
-useGLTF.preload("/backpack.glb");
+useGLTF.preload("./backpack.glb");

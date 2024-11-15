@@ -8,10 +8,12 @@ export const IosArView = ({ mesh, setLoading, isLoading }) => {
 
   React.useEffect(() => {
     setLoading(true);
-    exportUSDZ(mesh).then((res) => {
-      setLoading(false);
-      setLink(res);
-    });
+    setTimeout(() => {
+      exportUSDZ(mesh).then((res) => {
+        setLoading(false);
+        setLink(res);
+      });
+    }, 1000);
   }, [mesh]);
 
   return (
@@ -27,7 +29,7 @@ export const IosArView = ({ mesh, setLoading, isLoading }) => {
             alignItems: "center",
           }}
         >
-          <img src="/assets/arIcon.svg" style={{ display: "none" }} />
+          <img src="./assets/arIcon.svg" style={{ display: "none" }} />
           <svg
             width="14"
             height="14"
